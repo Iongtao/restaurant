@@ -1,0 +1,41 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["name"],
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": true
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"name": {
+			"title": "菜名",
+			"bsonType": "string",
+			"description": "这只是一个菜名罢了"
+		},
+		"tag": {
+			"title": "分类标签",
+			"bsonType": "array",
+			"enum": [1, 2, 3]
+		},
+		"mainIngredient": {
+			"title": "主料",
+			"bsonType": "array",
+			"arrayType": "object"
+		},
+		"secondIngredient": {
+			"title": "辅料",
+			"bsonType": "array",
+			"arrayType": "object"
+		},
+		"otherIngredient": {
+			"title": "配料",
+			"bsonType": "array",
+			"arrayType": "object"
+		}
+	}
+}
